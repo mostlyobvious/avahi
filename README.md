@@ -7,9 +7,11 @@ Current state:
 
 Example usage:
 
-	require 'avahi/address'
+```ruby
+require 'avahi/address'
 
-	addr = Avahi::Address.new('super-duper-host.local', '127.0.0.1')
-	addr.publish
+addr = Avahi::Address.new('super-duper-host.local', '127.0.0.1')
+addr.publish
 
-	`ping -c1 super-duper-host.local`.split("\n").first # => "PING super-duper-host.local (127.0.0.1) 56(84) bytes of data."
+`ping -c1 super-duper-host.local | head -1` # => "PING super-duper-host.local (127.0.0.1) 56(84) bytes of data."
+```
